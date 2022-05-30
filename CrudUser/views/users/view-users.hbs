@@ -1,0 +1,37 @@
+<h3><a href="/user/" class="btn btn-primary">ADD PRODUCT</a>
+VIEW LIST INFORMATINON PRODUCT</h3>
+
+<table class="table table-bordered">
+<tr>
+    <th>TÊN SẢN PHẨM</th>
+    <th>GIÁ BÁN</th>
+    <th>MÀU SẮC</th>
+    <th>THỂ LOẠI</th>
+    <th>THÔNG TIN SẢN PHẨM</th>
+    <th>ACTION</th>
+</tr>
+    <tr>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td> 
+        <a href="/user/edit/{{this._id}}" class="btn btn-primary btn-sm">Edit</a>
+        <a href="/user/delete/{{this._id}}" onclick="return confirm('Are your sure ?')"  class="btn btn-danger btn-sm">Delete</a>
+        </td>
+    </tr>
+    {{#each users}}
+    <tr>
+        <td>{{this.fullName}}</td>
+        <td>{{this.email}}</td>
+        <td>{{this.password}}</td>
+        <td>{{this.phone}}</td>
+        <td>{{this.address}}</td>
+        <td> 
+        <a href="/user/edit/{{this._id}}" class="btn btn-primary btn-sm">Edit</a>
+        <a href="/user/delete/{{this._id}}" class="btn btn-danger btn-sm">Delete</a>
+        </td>
+    </tr>
+    {{/each}}
+</table>

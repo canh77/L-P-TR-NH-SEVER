@@ -1,0 +1,31 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/user/add" method="POST" autocomplete="off">
+<input type="hidden" name="id" value="{{user.id}}" >
+<div class="form-group">
+  <label for="">Tên Sản phẩm</label>
+  <input type="text" name="fullName"  value="{{user.fullName}}" class="form-control" placeholder="">
+</div>
+<div class="form-group">
+  <label for="">Giá bán</label>
+  <input type="text" name="email" value="{{user.email}}" class="form-control" placeholder="">
+</div>
+<div class="form-group">
+  <label for="">Màu sắc</label>
+  <input type="text" name="password" value="{{user.password}}" class="form-control" placeholder="">
+</div>
+<div class="form-row">
+<div class="form-group col-sm-6">
+  <label for="">Thể loại</label>
+  <input type="text" name="phone" value="{{user.phone}}" class="form-control" placeholder="">
+</div>
+<div class="form-group col-sm-6">
+  <label for="">Thông tin sản phẩm</label>
+  <input type="text" name="address" value="{{user.address}}" class="form-control" placeholder="">
+    </div>
+</div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info">Submit</button>
+        <a href="/user/list" class="btn btn-primary">View Product</a>
+    </div>
+</form>
